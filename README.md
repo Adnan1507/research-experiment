@@ -14,21 +14,19 @@
 
 # 
 
-# | What | File |
+# Paper: \[paper.md](paper.md) 
 
-# |---|---|
+# Experiment notebook (with outputs): \[experiment.ipynb](experiment.ipynb) 
 
-# | Paper | \[paper.md](paper.md) |
+# Slide deck: \[slides.pptx](slides.pptx) 
 
-# | Experiment notebook (with outputs) | \[experiment.ipynb](experiment.ipynb) |
+# Literature review: \[literature\_review.md](literature\_review.md) 
 
-# | Slide deck | \[slides.pptx](slides.pptx) |
+# Methodology: \[methodology.md](methodology.md) 
 
-# | Literature review | \[literature\_review.md](literature\_review.md) |
+# Dataset: \[diabetes.csv](diabetes.csv) 
 
-# | Methodology | \[methodology.md](methodology.md) |
+# Figure script: \[make\_figures.py](make\_figures.py) (figures saved in \[figures/](figures/)) 
 
-# | Dataset | \[diabetes.csv](diabetes.csv) |
-
-# | Figure script | \[make\_figures.py](make\_figures.py) (figures saved in \[figures/](figures/)) |
+# 
 
