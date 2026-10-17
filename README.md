@@ -1,4 +1,4 @@
-# \# Predicting Diabetes Onset: Logistic Regression vs Random Forest
+#  Predicting Diabetes Onset: Logistic Regression vs Random Forest
 
 # 
 
@@ -6,11 +6,11 @@
 
 # 
 
-# \*\*Main result:\*\* the two models tied on test ROC-AUC (0.820 vs 0.819), and logistic regression scored higher in 5-fold cross-validation (0.847 vs 0.824), so the extra complexity gave no clear advantage.
+# Main result: the two models tied on test ROC-AUC (0.820 vs 0.819), and logistic regression scored higher in 5-fold cross-validation (0.847 vs 0.824), so the extra complexity gave no clear advantage.
 
 # 
 
-# \## Project files
+#  Project files
 
 # 
 
