@@ -8,7 +8,7 @@ Early detection of diabetes can reduce serious complications, and machine learni
 
 Diabetes is a major health problem, and catching it early gives patients a better chance of avoiding complications. The Pima Indians Diabetes dataset is a classic benchmark for this task. It comes from the National Institute of Diabetes and Digestive and Kidney Diseases and records clinical measurements for women from a population with a very high rate of diabetes.
 
-The dataset was first used by Smith et al. (1988), who tested an early neural network called ADAP and found it reached about 76% sensitivity and specificity on held-out cases. Later work has compared many algorithms on the same data. Alzboon et al. (2025) tested eight classifiers and found the best accuracy was only about 78.6%, with random forest close behind at about 76.3%, so the differences between models were small. Wajahat and Keshtkar (2024) found that glucose was the strongest predictor in every model they tried, and that plain logistic regression outperformed random forest, k-nearest neighbours and a deep neural network. In contrast, Taz (2021) reported accuracy above 88% for random forest and XGBoost, a figure far above the rest of the literature that is hard to evaluate because the abstract does not describe how the data were split or cleaned.
+The dataset was first used by Smith et al. (1988), who tested an early neural network called ADAP and found it reached about 76% sensitivity and specificity on held-out cases. Later work has compared many algorithms on the same data. Alzboon et al. (2025) tested eight classifiers and found the best accuracy was only about 78.6%, with random forest close behind at about 76.3%, so the differences between models were small. Wajahat and Keshtkar (2024) found that glucose was the strongest predictor in every model they tried, and that plain logistic regression outperformed random forest, k-nearest neighbours and a deep neural network. In contrast, Paul et al. (2025) reported accuracy above 88% for random forest and XGBoost, a figure far above the rest of the literature that is hard to evaluate because the abstract does not describe how the data were split or cleaned.
 
 These mixed findings raise a practical question: does a more complex model really help on a small dataset? This paper therefore asks: \*Can a random forest classifier predict diabetes onset in the Pima Indians dataset more accurately than a logistic regression baseline, as measured by ROC-AUC, F1-score and recall on the diabetic class, after cleaning the dataset's hidden missing values?\*
 
@@ -68,7 +68,7 @@ Figure 3 shows the confusion matrices. Of the 54 diabetic patients in the test s
 
 The main finding is that the more complex model did not clearly beat the simple one. The two models tie on the primary metric on the test set, random forest is somewhat better on the metrics that depend on a fixed 0.5 threshold, and logistic regression is better in cross-validation. This agrees with Wajahat and Keshtkar (2024), who also found logistic regression competitive, and with Alzboon et al. (2025), who found only small differences between models. It also suggests that on a small tabular dataset with a few informative features, a linear model can capture most of the available signal.
 
-The accuracy of 71-75% is in line with the roughly 76-79% reported in earlier work and well below the 88% claimed by Taz (2021). Without details of their data split we cannot tell why their figure is so high, but our results suggest that a value that high should be treated with caution.
+The accuracy of 71-75% is in line with the roughly 76-79% reported in earlier work and well below the 88% claimed by Paul et al. (2025). Without details of their data split we cannot tell why their figure is so high, but our results suggest that a value that high should be treated with caution.
 
 The most important practical weakness is recall. Even the better model found only 32 of 54 diabetic patients (59%). In a screening setting this is the costly kind of error, so a real system would need a lower decision threshold or a different model.
 
@@ -90,11 +90,11 @@ This study compared logistic regression and random forest for predicting diabete
 
 \## References
 
+Paul, R. U., Mbeledogu, N. N., Iduh, B. N., \& Okechukwu, O. P. (2025). A Comparative Analysis on diabetes using Ensemble Machine Learning Models on Pima Indian Datasets. Journal of Basic Physical Research, 14(2), 200–213.
+
 Salem Alzboon, M., Al-Batah, M., Alqaraleh, M., Abuashour, A., \& Fuad Bader, A. (2025). A Comparative Study of Machine Learning Techniques for Early Prediction of Diabetes. arXiv. https://doi.org/10.48550/arXiv.2506.10180
 
 Smith, J. W., Everhart, J. E., Dickson, W. C., Knowler, W. C., \& Johannes, R. S. (1988). Using the ADAP Learning Algorithm to Forecast the Onset of Diabetes Mellitus. Proceedings of the Annual Symposium on Computer Application in Medical Care, 261–265.
-
-Taz, N. H., Islam, A., \& Mahmud, I. (2021). A Comparative Analysis of Ensemble Based Machine Learning Techniques for Diabetes Identification. 2021 2nd International Conference on Robotics, Electrical and Signal Processing Techniques (ICREST), 1–6. https://doi.org/10.1109/ICREST51555.2021.9331036
 
 Wajahat, I., Keshtkar, F., \& Bukhari, S. A. C. (2024). Advancing Precision Healthcare Analytics: Machine Learning Approach-es for Diabetes Prognosis using the PIMA Indian Dataset. The International FLAIRS Conference Proceedings, 37. https://doi.org/10.32473/flairs.37.1.135329
 
